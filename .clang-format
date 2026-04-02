@@ -1,0 +1,6 @@
+BasedOnStyle: Google
+ColumnLimit: 100
+IndentWidth: 2
+Standard: c++20
+IncludeBlocks: Regroup
+SortIncludes: CaseSensitive

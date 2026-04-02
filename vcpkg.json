@@ -1,0 +1,11 @@
+{
+  "name": "cplus-template",
+  "version-string": "1.0.0",
+  "description": "C++ backend template — Cloud Functions Framework, layered architecture",
+  "dependencies": [
+    "functions-framework-cpp",
+    "nlohmann-json",
+    "spdlog",
+    "gtest"
+  ]
+}

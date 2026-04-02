@@ -1,0 +1,8 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "3000:8080"
+    env_file:
+      - .env.example

@@ -1,0 +1,33 @@
+{
+  "name": "cplus",
+  "displayName": "C++",
+  "description": "C++20 backend service on Google Cloud Functions Framework with layered architecture, spdlog, and Docker",
+  "category": "backend",
+  "language": "cpp",
+  "framework": "cloud-functions-cpp",
+  "tags": ["cpp20", "cmake", "vcpkg", "google-cloud-functions", "spdlog", "docker"],
+  "features": ["router-pattern", "layered-architecture", "docker", "unit-testing", "cloud-run"],
+  "commands": {
+    "build": "cmake --preset debug && cmake --build --preset debug",
+    "test": "ctest --preset debug",
+    "docker": "docker-compose up --build"
+  },
+  "packageManager": "vcpkg",
+  "ci": {
+    "workflowTemplate": "cplus",
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "name": "cmake",
+      "version": "latest",
+      "setup": "apt",
+      "cache": null
+    },
+    "services": {},
+    "steps": {
+      "install": "sudo apt-get update && sudo apt-get install -y cmake build-essential",
+      "build": "cmake --preset debug && cmake --build --preset debug",
+      "test": "ctest --preset debug",
+      "lint": null
+    }
+  }
+}
